@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-slate-950 text-slate-200 antialiased;
+        font-feature-settings: 'tnum' 1, 'ss01' 1;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-semibold text-slate-100;
+    }
+}
+
+@layer components {
+    .app-shell {
+        @apply min-h-screen bg-slate-900 text-slate-200;
+    }
+
+    .app-card {
+        @apply rounded-xl border border-slate-800 bg-slate-950/90 shadow-sm;
+    }
+
+    .app-table {
+        @apply w-full overflow-hidden rounded-xl border border-slate-800;
+    }
+
+    .app-table thead {
+        @apply bg-slate-900 text-xs uppercase tracking-wide text-slate-400;
+    }
+
+    .app-table th,
+    .app-table td {
+        @apply px-4 py-3 text-sm;
+    }
+
+    .app-table tbody tr {
+        @apply border-t border-slate-800 transition-colors;
+    }
+
+    .app-table tbody tr:hover {
+        @apply bg-slate-900/60;
+    }
+
+    .btn-primary {
+        @apply inline-flex items-center justify-center rounded-lg bg-emerald-500 px-4 py-2 text-sm font-medium text-slate-950 transition hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500/40;
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center justify-center rounded-lg border border-slate-700 bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200 transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-600;
+    }
+
+    .form-input-dark {
+        @apply w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-emerald-500 focus:ring-emerald-500;
+    }
+}

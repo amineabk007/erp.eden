@@ -3,7 +3,6 @@ import forms from '@tailwindcss/forms';
 
 /** @type {import('tailwindcss').Config} */
 export default {
-    // Enable manual dark mode via a "dark" class on <html>
     darkMode: 'class',
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
@@ -14,7 +13,20 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Inter', ...defaultTheme.fontFamily.sans],
+            },
+            colors: {
+                eden: {
+                    bg: '#0F172A',
+                    sidebar: '#020617',
+                    panel: '#020617',
+                    primary: '#22C55E',
+                    accent: '#16A34A',
+                    text: '#E5E7EB',
+                    muted: '#94A3B8',
+                    danger: '#EF4444',
+                    warning: '#F59E0B',
+                },
             },
         },
     },
